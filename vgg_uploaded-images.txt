@@ -1,0 +1,87 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                   Chair_01.jpg  label:                      chair
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                   Horse_01.jpg  label:                      horse
+
+     MATCH:
+
+                  Chair_01.jpg: 
+Real:                      chair   Classifier:                   barber chair
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:      saint bernard, st bernard
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                          llama
+
+                  Horse_01.jpg: 
+Real:                      horse   Classifier: arabian camel, dromedary, camelus dromedarius
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+     MATCH:
+
+                  Chair_01.jpg: 
+Real:                      chair   Classifier:                   barber chair  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:      saint bernard, st bernard  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                          llama  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                  Horse_01.jpg: 
+Real:                      horse   Classifier: arabian camel, dromedary, camelus dromedarius  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Summary for CNN Model Architecture VGG ***
+# Images            : 4.000000
+# Dog Images        : 2.000000
+# Not-Dog Images    : 2.000000
+ 
+n_images            : 4.000000
+n_dogs_img          : 2.000000
+n_match             : 1.000000
+n_correct_dogs      : 1.000000
+n_correct_notdogs   : 2.000000
+n_correct_breed     : 0.000000
+n_labels_match      : 1.000000
+n_notdogs_img       : 2.000000
+pct_match           : 25.000000
+pct_correct_dogs    : 50.000000
+pct_correct_breed   : 0.000000
+pct_correct_notdogs : 100.000000
+pct_label_match     : 25.000000
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier:                          llama
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:      saint bernard, st bernard
+
+** Total Elapsed Runtime: 0:0:8
